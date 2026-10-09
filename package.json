@@ -1,0 +1,7 @@
+{
+  "name": "filtering-flows-timeout-test",
+  "private": true,
+  "scripts": {
+    "generate": "node scripts/generate-stress-fixture.mjs"
+  }
+}
