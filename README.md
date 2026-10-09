@@ -2,7 +2,7 @@
 
 This repository is a scanner stress fixture for the `filteringFlowsTimeout` use case.
 
-`src/stress.js` is generated code. It creates sensitive `accountPassword` sources and sends each source repeatedly to logging, HTTP, and browser-storage sink patterns. The default fixture contains 102,400 sink calls.
+`src/stress.js` is generated code. It creates sensitive `password` sources and sends each source repeatedly to logging, HTTP, and browser-storage sink patterns. The default fixture contains 102,400 sink calls while remaining below the scanner's 5 MB per-file limit.
 
 ## Regenerate the fixture
 
